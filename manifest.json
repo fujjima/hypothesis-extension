@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Convert WYSIWYG to Markdown",
+  "action": {},
+  "version": "1.0.0.0",
+  "description": "a extention for hypothesis",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "scripts/convert.js"
+  }
+}
