@@ -3,12 +3,22 @@
   "name": "Convert WYSIWYG to Markdown",
   "action": {},
   "version": "1.0.0.0",
-  "description": "a extention for hypothesis",
+  "description": "extention for hypothesis",
   "permissions": [
     "activeTab",
     "scripting"
   ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/content/content.js"
+      ]
+    }
+  ],
   "background": {
-    "service_worker": "scripts/convert.js"
+    "service_worker": "scripts/background/background.js"
   }
 }
