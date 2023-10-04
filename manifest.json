@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Convert WYSIWYG to Markdown",
+  "action": {},
+  "version": "1.0.0.0",
+  "description": "extention for hypothesis",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/content/loader.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "/dist/*",
+        "/func-test.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  }
+}
